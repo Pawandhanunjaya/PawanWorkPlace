@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+GET     /v1/flights                    controllers.HomeController.getFlights()
+
+PUT     /v1/flights                    controllers.HomeController.getFlights()
+
+
+POST    /v1/new                     controllers.HomeController.addFlights(request : Request)
+
+PUT     /v1/update              controllers.HomeController.updateFlight(request : Request)
